@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3R5JH7J2MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3R5JH7J2MH');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Mayores Actividades | Terapia Ocupacional Lorena Barrado",
+  "url": "https://mayores-actividades-lorena.netlify.app", 
+  "telephone": "+34711214113",
+  "email": "enmayoresactividades@gmail.com",
+  "description": "Servicios de Terapia Ocupacional a domicilio, especializados en personas mayores y estimulación cognitiva, en la Comunidad de Madrid.",
+  "serviceArea": {
+    "@type": "State",
+    "name": "Comunidad de Madrid"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Madrid"
+  },
+  "openingHours": "Mo-Fr 09:00-19:00"
+}
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayores Actividades | Terapia Ocupacional Lorena Barrado</title>
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        :root {
+            --verde-principal: #4A7C59;
+            --verde-claro: #E8F3EB;
+            --texto-oscuro: #2C3E50;
+            --blanco: #ffffff;
+            --gris-fondo: #f9f9f9;
+            --whatsapp-color: #25D366;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+            background-color: #fdfdfd;
+        }
+
+        h1, h2, h3, h4 { margin-top: 0; }
+        img { max-width: 100%; height: auto; border-radius: 5px; }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        nav {
+            background: var(--blanco);
+            padding: 0.5rem 2%;
+            border-bottom: 1px solid #ddd;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo-container { display: flex; align-items: center; cursor: pointer; margin-right: 10px;}
+        .logo-img { height: 60px; width: auto; margin-right: 10px; object-fit: contain; }
+
+        .menu-links { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; justify-content: center; }
+        
+        .btn-menu { 
+            background: none; border: none; cursor: pointer;
+            text-decoration: none; color: var(--texto-oscuro); font-weight: 600; 
+            font-size: 0.85rem; text-transform: uppercase; padding: 10px 12px;
+            transition: all 0.3s; font-family: inherit;
+        }
+        .btn-menu:hover { color: var(--verde-principal); background-color: var(--verde-claro); border-radius: 5px; }
+        .btn-menu.activo { color: white; background-color: var(--verde-principal); border-radius: 5px; }
+
+        /* --- SECCIONES --- */
+        section { 
+            display: none; 
+            padding: 4rem 5%; 
+            animation: aparecer 0.5s ease;
+            min-height: 80vh; 
+        }
+        
+        /* ESTILO ESPECÍFICO PARA PÁGINAS LEGALES */
+        #politica-privacidad, #terminos-condiciones, #politica-cookies, #aviso-legal {
+             max-width: 1000px;
+             margin: 0 auto;
+             padding: 4rem 2%; /* Ajuste de padding si es necesario */
+        }
+        #politica-privacidad h1, #terminos-condiciones h1, #politica-cookies h1, #aviso-legal h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--verde-principal);
+        }
+        #politica-privacidad h2, #terminos-condiciones h2, #politica-cookies h2, #aviso-legal h2 {
+            font-size: 1.8rem;
+            color: var(--texto-oscuro);
+            border-bottom: 1px solid var(--verde-principal);
+            padding-bottom: 10px;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            text-align: left; /* Títulos de sección a la izquierda */
+            display: block; /* Para que ocupe todo el ancho si el h2 principal es inline-block */
+        }
+        #politica-privacidad h3, #terminos-condiciones h3, #politica-cookies h3, #aviso-legal h3 {
+            font-size: 1.4rem;
+            color: var(--verde-principal);
+            margin-top: 1.5rem;
+        }
+        #politica-privacidad h4, #terminos-condiciones h4, #politica-cookies h4, #aviso-legal h4 {
+            font-size: 1.2rem;
+            color: var(--texto-oscuro);
+            margin-top: 1rem;
+        }
+        #politica-privacidad ul, #terminos-condiciones ul, #politica-cookies ul, #aviso-legal ul {
+            margin-left: 20px;
+            padding-left: 0;
+            list-style: disc;
+        }
+        /* Para listas dentro de listas, ajustamos el estilo */
+        #politica-privacidad ul ul, #terminos-condiciones ul ul, #politica-cookies ul ul, #aviso-legal ul ul {
+            list-style: circle;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        #politica-privacidad li p, #terminos-condiciones li p, #politica-cookies li p, #aviso-legal li p {
+            margin: 0;
+        }
+
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 { text-align: center; font-size: 2.2rem; color: var(--verde-principal); margin-bottom: 3rem; border-bottom: 2px solid var(--verde-claro); display: inline-block; padding-bottom: 10px;}
+        .titulo-centrado { text-align: center; }
+
+        /* --- ESTILOS INICIO --- */
+        #inicio {
+            display: block; 
+            background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover; background-position: center;
+            text-align: center;
+            padding-top: 5rem;
+        }
+
+        h1 { font-size: 3.5rem; color: var(--verde-principal); margin-bottom: 1rem; text-shadow: 2px 2px 0px white; }
+        
+        .formula-box {
+            background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-weight: bold; font-size: 1.1rem; color: var(--texto-oscuro); max-width: 850px; margin: 0 auto 3rem auto;
+            border-left: 6px solid var(--verde-principal);
+        }
+
+        .intro-texto { max-width: 900px; margin: 0 auto 3rem auto; font-size: 1.15rem; text-align: justify; }
+        .enfermedades-container { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-bottom: 3rem; text-align: left; }
+        .caja-enfermedad { flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid var(--verde-principal); }
+        .caja-enfermedad h3 { color: var(--verde-principal); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .caja-enfermedad ul { padding-left: 20px; }
+        .caja-enfermedad li { margin-bottom: 8px; }
+
+        .boton-cta { 
+            background-color: var(--verde-principal); color: white; padding: 15px 40px; cursor: pointer;
+            border: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; 
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.4); transition: transform 0.3s;
+        }
+        .boton-cta:hover { transform: scale(1.05); background-color: #3a6346; }
+
+        /* --- ESTILOS SOBRE MÍ --- */
+        #sobre-mi {
+            /* Mantenemos el min-height, pero ajustamos padding si es necesario */
+        }
+        .sobre-mi-layout { max-width: 1000px; margin: 0 auto; }
+        .bio-principal { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; margin-bottom: 4rem; }
+        .bio-texto { flex: 2; min-width: 300px; text-align: justify; }
+        .bio-foto { flex: 1; min-width: 250px; text-align: center; }
+        .foto-perfil { width: 280px; height: 280px; object-fit: cover; border-radius: 50%; border: 6px solid var(--verde-claro); }
+
+        .caja-formacion { background: var(--gris-fondo); padding: 2rem; border-radius: 10px; margin-bottom: 4rem; border-left: 5px solid var(--verde-principal); }
+        .caja-formacion ul { list-style-type: none; padding: 0; }
+        .caja-formacion li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        .caja-formacion li:before { content: "🎓"; position: absolute; left: 0; color: var(--verde-principal); }
+
+        .proceso-pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .paso { background: white; padding: 1.5rem; border-radius: 10px; border: 1px solid #eee; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+        .numero-paso { background: var(--verde-principal); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 15px auto; }
+        
+        .iconos-contacto-rapido { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .btn-icono { display: flex; align-items: center; gap: 10px; padding: 12px 25px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; transition: transform 0.2s; cursor: pointer; border: none;}
+        .btn-icono:hover { transform: translateY(-3px); }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-telefono { background-color: #3498db; }
+        .btn-email { background-color: #e74c3c; }
+
+        /* --- ESTILOS SERVICIOS (INFORMACIÓN) --- */
+        .que-es-to { text-align: center; max-width: 800px; margin: 0 auto 4rem auto; font-size: 1.1rem; }
+        
+        .beneficios-container { margin-bottom: 4rem; }
+        .lista-beneficios { list-style: none; padding: 0; display: grid; gap: 1.5rem; }
+        .lista-beneficios li { background: white; padding: 1.5rem; border-radius: 8px; border-left: 5px solid var(--verde-principal); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .lista-beneficios strong { color: var(--verde-principal); font-size: 1.1rem; }
+        
+        .dirigido-container { background: var(--verde-claro); padding: 3rem; border-radius: 15px; margin-bottom: 4rem; }
+        .lista-dirigido { list-style-type: disc; padding-left: 20px; }
+        .lista-dirigido li { margin-bottom: 10px; font-size: 1.05rem; }
+
+        .adaptacion-hogar-box { max-width: 900px; margin: 0 auto 4rem auto; padding: 2rem; background: #fff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .adaptacion-hogar-box h3 { color: var(--texto-oscuro); font-size: 1.8rem; border-bottom: 2px solid var(--verde-claro); padding-bottom: 10px; margin-bottom: 2rem; }
+        .proceso-list { list-style: none; padding: 0; }
+        .proceso-list li { margin-bottom: 20px; padding-left: 15px; border-left: 4px solid var(--verde-principal); }
+        .proceso-list strong { display: block; margin-bottom: 5px; font-size: 1.1rem; }
+
+
+        .cta-servicios { text-align: center; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 700px; margin: 0 auto; border-top: 5px solid var(--verde-principal); }
+
+        /* --- TARIFAS (ANTIGUO SERVICIOS) --- */
+        .grid-tarifas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .card-tarifa { 
+            background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; 
+            border-top: 5px solid var(--verde-principal); display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .vr-card { border-top: 5px solid #8e44ad; }
+        .vr-card h3 { color: #8e44ad; }
+        .precio { font-size: 1.8rem; font-weight: bold; color: var(--texto-oscuro); margin: 15px 0; }
+        .zona-aviso { text-align: center; margin-top: 3rem; background: #fff; padding: 1rem; display: inline-block; border-radius: 50px; border: 1px solid #ddd; }
+
+        /* --- RECURSOS --- */
+        .recursos-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1.5rem; 
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+        .recurso-item { background: white; padding: 2rem; border-radius: 8px; text-align: center; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05);}
+
+        /* --- BLOG --- */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+        .articulo { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .articulo-texto { padding: 1.5rem; }
+
+        /* --- SUSCRIPCIÓN (Añadido) --- */
+        .suscripcion-box {
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            padding: 2rem;
+            background: var(--verde-claro);
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .suscripcion-box input[type="email"] {
+            width: 65%; /* Ajustado para que quepa en la caja */
+            display: inline-block;
+        }
+        .suscripcion-box button {
+            width: 30%; /* Ajustado para que quepa en la caja */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 0;
+        }
+
+        /* --- CONTACTO --- */
+        .contenedor-contacto-flex { display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; max-width: 1000px; margin: 0 auto; }
+        .columna-contacto { flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .contacto-link { color: var(--verde-principal); text-decoration: none; font-weight: bold; }
+        input, textarea { width: 100%; padding: 12px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .btn-enviar { background-color: var(--verde-principal); color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+        .btn-enviar:hover { background-color: #3a6346; }
+        
+        /* CORREGIDO: Placeholder en negrita con compatibilidad multi-navegador */
+        input::placeholder, input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
+            font-weight: bold;
+            color: #555; 
+            opacity: 1; 
+        }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 20px; background: #eee; font-size: 0.8rem; color: #666; margin-top: auto;}
+        .footer-links a { 
+            color: #666; 
+            margin: 0 8px; 
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--verde-principal);
+        }
+
+        /* MÓVIL */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            nav { flex-direction: column; gap: 1rem; }
+            .logo-img { height: 50px; margin-bottom: 10px; }
+            .menu-links { justify-content: center; gap: 5px; }
+            .btn-menu { font-size: 0.8rem; padding: 8px 10px; }
+            .bio-principal { flex-direction: column-reverse; text-align: center; }
+            .bio-texto { text-align: center; }
+            .enfermedades-container { flex-direction: column; }
+            .suscripcion-box input[type="email"], .suscripcion-box button {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style></head><body>
+
+    <nav>
+        <div class="logo-container" onclick="cambiarPestana('inicio')">
+            <img src="logo.png" alt="Logo" class="logo-img">
+            <span style="font-weight: bold; font-size: 1.1rem; color: #4A7C59; text-transform: uppercase;">Mayores Actividades</span>
+        </div>
+        <div class="menu-links">
+            <button class="btn-menu activo" onclick="cambiarPestana('inicio')" id="btn-inicio">INICIO</button>
+            <button class="btn-menu" onclick="cambiarPestana('sobre-mi')" id="btn-sobre-mi">SOBRE MÍ</button>
+            <button class="btn-menu" onclick="cambiarPestana('servicios-info')" id="btn-servicios-info">SERVICIOS</button>
+            <button class="btn-menu" onclick="cambiarPestana('tarifas')" id="btn-tarifas">TARIFAS</button>
+            <button class="btn-menu" onclick="cambiarPestana('recursos')" id="btn-recursos">RECURSOS</button>
+            <button class="btn-menu" onclick="cambiarPestana('blog')" id="btn-blog">BLOG</button>
+            <button class="btn-menu" onclick="cambiarPestana('contacto')" id="btn-contacto">CONTACTO</button>
+        </div>
+    </nav>
+
+    <section id="inicio">
+        <h1>Mayores Actividades</h1>
+        <div class="formula-box">
+            VALORACIÓN + TRATAMIENTO + VOCACIÓN + PROFESIONALIDAD + EXPERIENCIA = <span style="color:var(--verde-principal)">REHABILITACIÓN</span>
+        </div>
+        <div class="intro-texto">
+            <p>La rehabilitación de manera temprana retrasa la aparición de síntomas o ralentiza el proceso que se haya iniciado debido a una enfermedad degenerativa.</p> 
+            <p>Diseñamos un tratamiento 100% personalizado que se basa en tus intereses y los de tu familia, garantizando un enfoque más motivador y un mejor resultado. Las principales áreas con las que trabajamos son:</p>
+        </div>
+        <div class="enfermedades-container">
+            <div class="caja-enfermedad">
+                <h3>🦾 Físico</h3>
+                <p>Enfermedades que tengan como consecuencia una pérdida del estado físico:</p>
+                <ul>
+                    <li>Rotura o reemplazo de cadera o rodilla</li>
+                    <li>Ictus</li>
+                    <li>Artrosis</li>
+                    <li>Ataxia</li>
+                    <li>Hidrocefalia</li>
+                    <li>Esclerosis múltiple</li>
+                    <li>Lesiones de mano (nervio cubital, nervio radial, túnel carpiano)</li>
+                </ul>
+            </div>
+            <div class="caja-enfermedad" style="border-top-color: #8e44ad;">
+                <h3>🧠 Deterioro Cognitivo</h3>
+                <p>Enfermedades como demencias o que causen deterioro cognitivo leve:</p>
+                <ul>
+                    <li>Enfermedad de Alzheimer</li>
+                    <li>Enfermedad de Párkinson</li>
+                    <li>Demencia de cuerpos de Lewy</li>
+                    <li>Demencia vascular</li>
+                    <li>ICTUS</li>
+                    <li>Enfermedades neurodegenerativas</li>
+                </ul>
+            </div>
+        </div>
+        <button class="boton-cta" onclick="cambiarPestana('contacto')">Solicitar Valoración</button>
+    </section>
+
+    <section id="sobre-mi">
+        <div class="titulo-centrado"><h2>Sobre Mí</h2></div>
+        <div class="sobre-mi-layout">
+            <div class="bio-principal">
+                <div class="bio-texto">
+                    <h3>Hola, soy Lorena Barrado Delgado</h3>
+                    <p>Mi formación y mis 9 años de experiencia me han enseñado que la Terapia Ocupacional va mucho más allá de un tratamiento. Implica ver a la persona de forma integral, convertirme en un gran apoyo y detectar las necesidades que no se ven a simple vista.</p>
+                    <p>Por eso, mi compromiso es conocer a fondo a cada persona para saber exactamente qué necesita en cada momento del proceso y ofrecer el apoyo más efectivo y centrado en sus intereses.</p>
+                    <p>Si lo que buscas en una persona profesional y comprometida que sea cercana y cree ese clima de confianza necesario para ayudar en el camino hacia tener una vida más independiente, no dudes en ponerte en contacto conmigo. Estoy aquí para que me preguntes lo que necesites, apoyarte y acompañar en el proceso de rehabilitación.</p>
+                    <div style="margin-top: 20px;">
+                        <button class="boton-cta" style="padding: 10px 25px; font-size: 1rem;" onclick="cambiarPestana('contacto')">Contacta Conmigo</button>
+                    </div>
+                </div>
+                <div class="bio-foto">
+                    <img src="lorena_perfil.jpg" alt="Lorena Barrado" class="foto-perfil">
+                </div>
+            </div>
+            <div class="caja-formacion">
+                <h3 style="color: var(--verde-principal);">Mi formación y experiencia:</h3>
+                <ul>
+                    <li>Grado en terapia ocupacional por la Universidad Rey Juan Carlos.</li>
+                    <li>Grado superior en Intérprete de lengua de signos y guía-intérprete de personas sordociegas.</li>
+                    <li>Especializada en comunicación mediante curso PECS y lengua de signos.</li>
+                    <li>9 años realizando terapias a domicilio y sesiones grupales de estimulación cognitiva y gerontogimnasia.</li>
+                </ul>
+            </div>
+            <div style="text-align: center;">
+                <h3 style="font-size: 1.8rem;">Te muestro el proceso que seguiremos si trabajas conmigo:</h3>
+                <div class="proceso-pasos">
+                    <div class="paso">
+                        <div class="numero-paso">1</div>
+                        <h4>¡Presentación!</h4>
+                        <p style="font-size: 0.95rem;">Tu primer contacto conmigo será llamarme, escribirme un whatsapp o un correo electrónico. Este primer contacto me servirá para saber cuáles son tus necesidades y qué terapia es la más adecuada para ti o para tu familiar. Si, después de saber tus objetivos, considero que te iría mejor con otro profesional, no dudes en que te lo haré saber.</p>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">2</div>
+                        <h4>Programamos una visita</h4>
+                        <p style="font-size: 0.95rem;">Una vez termines de contarme tu caso, acordaremos una visita en el domicilio para poder realizar una valoración integral el día y a la hora que mejor te venga.</p>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">3</div>
+                        <h4>¡Empezamos a trabajar!</h4>
+                        <p style="font-size: 0.95rem;">A partir de este momento, empezamos a trabajar y a perseguir los objetivos propuestos. En este momento, podrás acordar la frecuencia de las sesiones, el día de la semana y el horario.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                <h3>¿Tienes alguna duda?</h3>
+                <p>No tengas ningún tipo de reparo en llamar para informarte de manera gratuita y poder consultar cualquier duda que te pueda surgir.</p>
+                <div class="iconos-contacto-rapido">
+                    <a href="https://wa.me/34711214113" target="_blank" class="btn-icono btn-whatsapp">💬 WhatsApp</a>
+                    <a href="tel:711214113" class="btn-icono btn-telefono">📞 Llamar</a>
+                    <a href="mailto:enmayoresactividades@gmail.com" class="btn-icono btn-email">📧 Correo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios-info">
+        <div class="titulo-centrado"><h2>Nuestros Servicios</h2></div>
+        
+        <div class="que-es-to">
+            <h3 style="color: var(--verde-principal); font-size: 1.8rem; margin-bottom: 1rem;">¿QUÉ ES LA TERAPIA OCUPACIONAL?</h3>
+            <p>La Terapia Ocupacional es una disciplina socio-sanitaria que se encarga de fomentar la independencia de las personas en sus actividades de vida diaria. Para lograrlo, se crea un plan de tratamiento totalmente personalizado, adaptado a la patología y a los intereses específicos de cada cliente.</p>
+        </div>
+
+        <div class="beneficios-container">
+            <h3 style="color: var(--verde-principal); text-align: center; margin-bottom: 2rem; font-size: 1.8rem;">BENEFICIOS DE LA TERAPIA OCUPACIONAL</h3>
+            <p style="text-align: center; margin-bottom: 2rem;">La terapia ocupacional ofrece numerosos beneficios que crean un gran impacto positivo en la calidad de vida de las personas. El tratamiento puede ser preventivo, paliativo o para conseguir una mejoría. Los principales beneficios son:</p>
+            
+            <ul class="lista-beneficios">
+                <li>
+                    <strong>✅ Mejora de la independencia:</strong> <br>Fomentando las actividades de la vida diaria como la higiene, alimentación, cuidado de la casa y participación en actividades productivas y sociales.
+                </li>
+                <li>
+                    <strong>✅ Mejora de la calidad de vida:</strong> <br>Gracias a conseguir mayor independencia y a realizar actividades significativas para la persona, mejora la calidad de vida en general.
+                </li>
+                <li>
+                    <strong>✅ Adaptación del entorno:</strong> <br>El terapeuta ocupacional puede ofrecer diferentes adaptaciones a cada persona teniendo en cuenta su situación y sugerir un amplio abanico de adaptaciones del hogar para conseguir mayor independencia dentro de cada casa.
+                </li>
+                <li>
+                    <strong>✅ Prevención de lesiones y ralentización de síntomas:</strong> <br>Puede ayudar a prevenir lesiones y caídas realizando ejercicios de fuerza muscular, equilibrio, movilidad… También puede actuar a nivel cognitivo para ralentizar los síntomas ocasionados por una enfermedad neurodegenerativa o una demencia, así como evitar la aparición de síntomas manteniendo la mente activa.
+                </li>
+                <li>
+                    <strong>✅ Mejora de la salud mental:</strong> <br>La terapia ocupacional ayuda a mejorar el autoestima, reducir el estrés, promover la participación social haciendo sentir a la persona válida.
+                </li>
+            </ul>
+        </div>
+
+        <div class="dirigido-container">
+            <h3 style="color: var(--verde-principal); text-align: center; margin-bottom: 2rem;">¿A quién va dirigido?</h3>
+            <ul class="lista-dirigido">
+                <li><strong>Enfermedades degenerativas que causen deterioro cognitivo:</strong> Demencias (Alzheimer, Párkinson, cuerpos de Lewy, vascular).</li>
+                <li><strong>Patologías de miembro superior:</strong> Túnel carpiano, lesión en nervio cubital o radial, amputaciones, rotura supraespinoso…</li>
+                <li><strong>Patologías de miembro inferior:</strong> Rotura o sustitución de prótesis en cadera o rodilla.</li>
+                <li><strong>Enfermedades neurológicas:</strong> Accidente cerebro vascular o ictus, traumatismo craneoencefálico, esclerosis múltiple, esclerosis lateral amiotrófica.</li>
+                <li><strong>Enfermedades crónicas:</strong> Artritis, poliartrosis.</li>
+                <li><strong>Alteraciones en el procesamiento sensorial:</strong> Alteración del olfato, de la sensibilidad.</li>
+            </ul>
+        </div>
+        
+        <div class="adaptacion-hogar-box">
+            <h3>ADAPTACIÓN DEL HOGAR</h3>
+            <p>La mayor parte de las caídas suceden dentro de nuestro hogar, especialmente en las personas mayores, donde pueden llegar a producirse casi el 70% de las caídas. En muchas ocasiones se debe a mobiliario inadecuado, falta de iluminación, suelos resbaladizos por alfombras o falta de seguridad en sitios de riesgo como el baño o las escaleras.</p>
+            <p style="font-weight: bold; margin-bottom: 2rem;">Hacer una valoración del hogar para detectar posibles elementos poco adecuados es primordial para la prevención de caídas.</p>
+            
+            <h4 style="color: var(--verde-principal); margin-top: 2rem; border-bottom: 1px dashed #eee; padding-bottom: 10px;">Proceso del Servicio:</h4>
+            
+            <ul class="proceso-list">
+                <li>
+                    <strong style="color: var(--verde-principal);">1. Valoración integral del hogar:</strong> Se realizará una visita donde se valorará todas y cada una de las estancias del hogar así como la situación basal de la persona o personas que vivan dentro de la casa.
+                </li>
+                <li>
+                    <strong style="color: var(--verde-principal);">2. Informe completo y soluciones:</strong> Se realizará un informe completo donde se incluyan las mejoras o cambios a realizar dentro de la vivienda, así como la información de los productos de apoyo que la persona o personas que vivan en ese domicilio podrían tener para mejorar su independencia dentro y fuera de su hogar.
+                </li>
+                <li>
+                    <strong style="color: var(--verde-principal);">3. Entrega y formación para el uso:</strong> Una vez enviado el informe y con el previo consentimiento de la persona, os hacemos llegar los productos de apoyo que cada familia consideréis y en esa misma entrega se dan las nociones necesarias para usarlos correctamente.
+                </li>
+            </ul>
+
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem;">
+                👉 ¿Interesado/a? Consulta el precio detallado de este servicio en nuestra pestaña <a href="#" onclick="cambiarPestana('tarifas'); return false;" style="color: var(--verde-principal); font-weight: bold;">TARIFAS</a>.
+            </p>
+        </div>
+
+        <div class="cta-servicios">
+            <h3>¿Tienes alguna consulta?</h3>
+            <p>Para cualquier consulta no dudes en ponerte en contacto conmigo para valorar tu caso sin compromiso.</p>
+            <div style="font-size: 1.1rem; margin: 20px 0;">
+                <p>📞 711 214 113</p>
+                <p>✉️ enmayoresactividades@gmail.com</p>
+            </div>
+            <button class="boton-cta" onclick="cambiarPestana('contacto')">Ir al Formulario de Contacto</button>
+        </div>
+    </section>
+
+    <section id="tarifas">
+        <div class="titulo-centrado"><h2>Servicios y Tarifas</h2></div>
+        <p style="text-align: center; margin-bottom: 2rem;">Rehabilitación personalizada y servicios de consultoría en tu propio hogar.</p>
+        <div class="grid-tarifas">
+            <div class="card-tarifa adaptacion-card" style="border-top-color: #3498db;">
+                <h3>Adaptación del Hogar (Consultoría)</h3>
+                <p>Valoración completa de estancias, mobiliario, e iluminación para prevención de caídas.</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Incluye: Visita de valoración, entrevista y elaboración del informe detallado.</p>
+                <div>
+                    <span class="duracion">⏱ 1 Visita + Informe</span>
+                    <div class="precio">50€</div>
+                </div>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">**(Los productos de apoyo recomendados no están incluidos)**</p>
+            </div>
+
+            <div class="card-tarifa">
+                <h3>Rehabilitación a Domicilio</h3>
+                <p>Sesión estándar de terapia ocupacional.</p>
+                <div><span class="duracion">⏱ 60 minutos</span><div class="precio">40€</div></div>
+            </div>
+            <div class="card-tarifa vr-card">
+                <h3>Rehabilitación con Realidad Virtual</h3>
+                <p>Terapia innovadora usando gafas VR.</p>
+                <div><span class="duracion">⏱ 30 minutos</span><div class="precio">40€</div></div>
+            </div>
+            <div class="card-tarifa">
+                <h3>Pack Semanal (2 Sesiones)</h3>
+                <p>2 sesiones ordinarias a la semana.</p>
+                <div><span class="duracion">⏱ 60 min/sesión</span><div class="precio">70€ <span style="font-size:0.9rem;">/sem</span></div></div>
+            </div>
+            <div class="card-tarifa vr-card">
+                <h3>Pack Combinado (1+1)</h3>
+                <p>1 Sesión Ordinaria + 1 Sesión VR.</p>
+                <div><span class="duracion">⏱ 60 + 30 min</span><div class="precio">70€ <span style="font-size:0.9rem;">/sem</span></div></div>
+            </div>
+            <div class="card-tarifa vr-card">
+                <h3>Sesión Mixta</h3>
+                <p>Mitad terapia convencional, mitad VR.</p>
+                <div><span class="duracion">⏱ 30 + 30 min</span><div class="precio">55€</div></div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="zona-aviso">📍 <strong>Zona de Trabajo:</strong> Comunidad de Madrid</div>
+        </div>
+    </section>
+
+    <section id="recursos">
+        <div class="titulo-centrado"><h2>Recursos y Material de Apoyo</h2></div>
+        <div class="recursos-grid">
+            <div class="recurso-item">
+                <strong>📚 Cuadernos cognitivos</strong>
+                <p>Ejercicios de mantenimiento cognitivo de diferentes dificultades.</p>
+                <small>Próximamente</small>
+            </div>
+            <div class="recurso-item">
+                <strong>📱 Aplicaciones</strong>
+                <p>Ejercicios cognitivos</p>
+                <small>Próximamente</small>
+            </div>
+            <div class="recurso-item">
+                <strong>💻 Programas de realidad virtual</strong>
+                <p>Rehabilitación inmersiva y motivadora.</p>
+                <small>¡Disponible en sesiones!</small>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="titulo-centrado"><h2>Blog: Artículos y Noticias</h2></div>
+        <p style="text-align: center; margin-bottom: 3rem;">Mantente al día sobre Terapia Ocupacional, deterioro cognitivo y vida independiente.</p>
+        <div class="blog-grid">
+            <div class="articulo">
+                <img src="blog-img1.jpg" alt="Imagen del artículo 1" style="height: 200px; width: 100%; object-fit: cover;">
+                <div class="articulo-texto">
+                    <h4 style="color: var(--verde-principal);">La importancia de la actividad física en la tercera edad</h4>
+                    <p style="font-size: 0.9rem;">Descubre cómo el ejercicio adaptado puede prevenir caídas y mejorar el estado de ánimo de nuestros mayores.</p>
+                    <a href="#" style="color: #3498db; font-weight: bold;">Leer más →</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="blog-img2.jpg" alt="Imagen del artículo 2" style="height: 200px; width: 100%; object-fit: cover;">
+                <div class="articulo-texto">
+                    <h4 style="color: var(--verde-principal);">Adaptaciones simples para un hogar seguro</h4>
+                    <p style="font-size: 0.9rem;">Nuestros consejos de bajo coste para reducir los riesgos en el baño y la cocina.</p>
+                    <a href="#" style="color: #3498db; font-weight: bold;">Leer más →</a>
+                </div>
+            </div>
+            <div class="articulo">
+                <img src="blog-img3.jpg" alt="Imagen del artículo 3" style="height: 200px; width: 100%; object-fit: cover;">
+                <div class="articulo-texto">
+                    <h4 style="color: var(--verde-principal);">Estimulación cognitiva con realidad virtual</h4>
+                    <p style="font-size: 0.9rem;">Conoce la terapia innovadora que está revolucionando la rehabilitación neurocognitiva.</p>
+                    <a href="#" style="color: #3498db; font-weight: bold;">Leer más →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="titulo-centrado"><h2>Contacta con Lorena</h2></div>
+        <div class="contenedor-contacto-flex">
+            <div class="columna-contacto">
+                <h3 style="color: var(--verde-principal); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">Formulario de Contacto</h3>
+                <form action="#" method="POST">
+                    <label for="nombre">Nombre y Apellidos:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+
+                    <label for="mensaje">Mensaje / Consulta:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame tu caso y tus objetivos de rehabilitación" required></textarea>
+		    <div style="margin-top: 15px; margin-bottom: 20px; display: flex; align-items: flex-start;">
+        	    	<input type="checkbox" id="acepto-privacidad" name="acepto-privacidad" required style="margin-top: 4px;">
+        		<label for="acepto-privacidad" style="font-size: 0.9em; margin-left: 10px; line-height: 1.3;">
+            		    He leído y acepto la <a href="#politica-privacidad" onclick="cambiarPestana('politica-privacidad');" style="color: var(--verde-principal); text-decoration: underline;">Política de Privacidad</a>.
+        		</label>
+    		     </div>
+                    <button type="submit" class="btn-enviar">Enviar Consulta</button>
+                </form>
+            </div>
+            <div class="columna-contacto" style="flex: 0.8; min-width: 250px;">
+                <h3 style="color: var(--verde-principal); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">Información Directa</h3>
+                <p><strong>📞 Teléfono:</strong> <a href="tel:711214113" class="contacto-link">711 214 113</a></p>
+                <p><strong>📧 Email:</strong> <a href="mailto:enmayoresactividades@gmail.com" class="contacto-link">enmayoresactividades@gmail.com</a></p>
+                <p><strong>📍 Zona de Trabajo:</strong> Servicio a domicilio en toda la Comunidad de Madrid.</p>
+                
+                <h4 style="color: var(--texto-oscuro); margin-top: 30px; margin-bottom: 10px;">Horario de Atención Telefónica</h4>
+                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aviso-legal">
+        <div class="titulo-centrado"><h1>Aviso Legal</h1></div>
+        <p>Última actualización: 29 de noviembre de 2025</p>
+        <p>El presente Aviso Legal regula el acceso y el uso de la página web <a href="https://mayores-actividades-lorena.netlify.app/" rel="external nofollow noopener" target="_blank">https://mayores-actividades-lorena.netlify.app/</a> (en adelante, el "Sitio Web"), propiedad de Lorena Barrado Delgado.</p>
+
+        <h2>Datos del Titular del Sitio Web</h2>
+        <ul>
+            <li><strong>Titular:</strong> Lorena Barrado Delgado</li>
+            <li><strong>DNI/NIF:</strong> 47518228K</li>
+            <li><strong>Domicilio Social:</strong> C/ Parque Zarauz 2, Móstoles, Madrid.</li>
+            <li><strong>Email de Contacto:</strong> <a href="mailto:enmayoresactividades@gmail.com">enmayoresactividades@gmail.com</a></li>
+            <li><strong>Teléfono de Contacto:</strong> 711 214 113</li>
+        </ul>
+        
+        <p>La actividad principal de la titular es la prestación de servicios de Terapia Ocupacional.</p>
+
+        <h2>Condiciones de Uso</h2>
+        <p>El acceso y uso del Sitio Web le atribuye la condición de usuario e implica la plena aceptación, sin reservas, de las presentes condiciones de uso. El usuario se compromete a utilizar el Sitio Web, sus servicios y contenidos sin contravenir la legislación vigente, la buena fe, los usos generalmente aceptados y el orden público.</p>
+        
+        <h2>Responsabilidad</h2>
+        <p>Lorena Barrado Delgado no se hace responsable de los daños y perjuicios que pudieran derivarse del uso de la información y los contenidos del Sitio Web, ni de los enlaces a terceros que puedan aparecer en el mismo. La información aquí presentada es de carácter informativo y no sustituye en ningún caso el asesoramiento médico o terapéutico profesional.</p>
+        
+        <h2>Propiedad Intelectual e Industrial</h2>
+        <p>Todos los derechos de propiedad intelectual e industrial sobre el diseño, textos, gráficos, imágenes, iconos, logotipos, código fuente y demás contenidos del Sitio Web pertenecen a Lorena Barrado Delgado o a terceros cuyos derechos han sido cedidos. Queda estrictamente prohibida su reproducción, distribución, comunicación pública y transformación total o parcial sin la autorización expresa y escrita de la titular.</p>
+        
+        <h2>Ley Aplicable y Jurisdicción</h2>
+        <p>El presente Aviso Legal se rige por la normativa española vigente. Para la resolución de cualquier controversia que pudiera surgir, las partes se someterán a los juzgados y tribunales de la ciudad de Madrid, con renuncia expresa a cualquier otro fuero que pudiera corresponderles.</p>
+    </section>
+
+    <section id="terminos-condiciones">
+        <div class="titulo-centrado"><h1>Términos y Condiciones</h1></div>
+        <p>Última actualización: 29 de noviembre de 2025</p>
+        <p>Por favor, lea estos términos y condiciones cuidadosamente antes de utilizar Nuestro Servicio.</p>
+
+        <h2>Interpretación y Definiciones</h2>
+        <h3>Interpretación</h3>
+        <p>Las palabras cuyas letras iniciales están en mayúscula tienen significados definidos bajo las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado independientemente de si aparecen en singular o en plural.</p>
+
+        <h3>Definiciones</h3>
+        <p>A los efectos de estos Términos y Condiciones:</p>
+        <ul>
+            <li>
+                <p><strong>Afiliada</strong> significa una entidad que controla, es controlada por, o está bajo control común con una parte, donde "control" significa la propiedad del 50% o más de las acciones, participación patrimonial u otros valores con derecho a voto para la elección de directores u otra autoridad de gestión.</p>
+            </li>
+            <li>
+                <p><strong>País</strong> se refiere a: España</p>
+            </li>
+            <li>
+                <p><strong>Compañía</strong> (referida como "la Compañía", "Nosotros" o "Nuestro" en este Acuerdo) se refiere a Mayores actividades.</p>
+            </li>
+            <li>
+                <p><strong>Dispositivo</strong> significa cualquier dispositivo que pueda acceder al Servicio, como un ordenador, un teléfono móvil o una tableta digital.</p>
+            </li>
+            <li>
+                <p><strong>Servicio</strong> se refiere al Sitio Web.</p>
+            </li>
+            <li>
+                <p><strong>Términos y Condiciones</strong> (también referidos como "Términos") significan estos Términos y Condiciones que constituyen el acuerdo completo entre Usted y la Compañía con respecto al uso del Servicio. Este acuerdo de Términos y Condiciones ha sido creado con la ayuda del <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank">Generador de Términos y Condiciones</a>.</p>
+            </li>
+            <li>
+                <p><strong>Servicio de Red Social de Terceros</strong> significa cualquier servicio o contenido (incluyendo datos, información, productos o servicios) proporcionado por un tercero que pueda ser mostrado, incluido o puesto a disposición por el Servicio.</p>
+            </li>
+            <li>
+                <p><strong>Sitio Web</strong> se refiere a Mayores actividades, accesible desde <a href="https://mayores-actividades-lorena.netlify.app/" rel="external nofollow noopener" target="_blank">https://mayores-actividades-lorena.netlify.app/</a></p>
+            </li>
+            <li>
+                <p><strong>Usted</strong> se refiere a la persona que accede o utiliza el Servicio, o a la compañía u otra entidad legal en nombre de la cual dicha persona accede o utiliza el Servicio, según corresponda.</p>
+            </li>
+        </ul>
+
+        <h2>Reconocimiento</h2>
+        <p>Estos son los Términos y Condiciones que rigen el uso de este Servicio y el acuerdo que opera entre Usted y la Compañía. Estos Términos y Condiciones establecen los derechos y obligaciones de todos los usuarios con respecto al uso del Servicio.</p>
+        <p>Su acceso y uso del Servicio está condicionado a Su aceptación y cumplimiento de estos Términos y Condiciones. Estos Términos y Condiciones se aplican a todos los visitantes, usuarios y otras personas que acceden o utilizan el Servicio.</p>
+        <p>Al acceder o utilizar el Servicio, Usted acepta estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos Términos y Condiciones, entonces no podrá acceder al Servicio.</p>
+        <p>Usted declara que es mayor de 18 años. La Compañía no permite que los menores de 18 años utilicen el Servicio.</p>
+        <p>Su acceso y uso del Servicio también están condicionados a Su aceptación y cumplimiento de la Política de Privacidad de la Compañía. Nuestra Política de Privacidad describe Nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de Su información personal cuando utiliza la Aplicación o el Sitio Web y le informa sobre Sus derechos de privacidad y cómo le protege la ley. Lea Nuestra Política de Privacidad detenidamente antes de utilizar Nuestro Servicio.</p>
+
+        <h2>Enlaces a Otros Sitios Web</h2>
+        <p>Nuestro Servicio puede contener enlaces a sitios web o servicios de terceros que no son propiedad ni están controlados por la Compañía.</p>
+        <p>La Compañía no tiene control sobre el contenido, las políticas de privacidad o las prácticas de los sitios web o servicios de terceros y no asume ninguna responsabilidad por ellos. Además, Usted reconoce y acepta que la Compañía no será responsable, directa o indirectamente, de ningún daño o pérdida causada o supuestamente causada por o en relación con el uso o la confianza depositada en dicho contenido, bienes o servicios disponibles en o a través de dichos sitios web o servicios.</p>
+        <p>Le recomendamos encarecidamente que lea los términos y condiciones y las políticas de privacidad de cualquier sitio web o servicio de terceros que visite.</p>
+
+        <h2>Terminación</h2>
+        <p>Podemos terminar o suspender Su acceso inmediatamente, sin previo aviso ni responsabilidad, por cualquier motivo, incluido, entre otros, si Usted incumple estos Términos y Condiciones.</p>
+        <p>Upon termination, Your right to use the Service will cease immediately.</p>
+
+        <h2>Limitación de Responsabilidad</h2>
+        <p>Sin perjuicio de los daños en los que Usted pueda incurrir, la responsabilidad total de la Compañía y cualquiera de sus proveedores bajo cualquier disposición de estos Términos y Su recurso exclusivo para todo lo anterior se limitará a la cantidad realmente pagada por Usted a través del Servicio o 100 USD si no ha comprado nada a través del Servicio.</p>
+        <p>En la medida máxima permitida por la ley aplicable, en ningún caso la Compañía o sus proveedores serán responsables de ningún daño especial, incidental, indirecto o consecuente de ningún tipo (incluidos, entre otros, daños por pérdida de beneficios, pérdida de datos u otra información, por interrupción del negocio, por lesiones personales, pérdida de privacidad que surja de o de alguna manera esté relacionada con el uso o la imposibilidad de usar el Servicio, software de terceros y/o hardware de terceros utilizado con el Servicio, o en relación con cualquier disposición de estos Términos), incluso si la Compañía o cualquier proveedor ha sido advertido de la posibilidad de tales daños e incluso si el remedio falla en su propósito esencial.</p>
+        <p>Algunos estados no permiten la exclusión de garantías implícitas o la limitación de responsabilidad por daños incidentales o consecuentes, lo que significa que algunas de las limitaciones anteriores pueden no aplicarse. En estos estados, la responsabilidad de cada parte se limitará en la mayor medida permitida por la ley.</p>
+
+        <h2>Exención de Responsabilidad "TAL CUAL" y "SEGÚN DISPONIBILIDAD"</h2>
+        <p>El Servicio se le proporciona "TAL CUAL" y "SEGÚN DISPONIBILIDAD" y con todas las fallas y defectos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Compañía, en su propio nombre y en nombre de sus Afiliadas y sus respectivos licenciantes y proveedores de servicios, renuncia expresamente a todas las garantías, ya sean expresas, implícitas, legales o de otro tipo, con respecto al Servicio, incluidas todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir del curso de la negociación, curso del desempeño, uso o práctica comercial. Sin limitación a lo anterior, la Compañía no proporciona garantía ni compromiso, y no hace ninguna representación de ningún tipo de que el Servicio cumplirá con Sus requisitos, logrará los resultados previstos, será compatible o funcionará con cualquier otro software, aplicaciones, sistemas o servicios, operará sin interrupción, cumplirá con los estándares de rendimiento o confiabilidad o estará libre de errores o que cualquier error o defecto pueda o será corregido.</p>
+        <p>Sin limitar lo anterior, ni la Compañía ni ninguno de los proveedores de la compañía hacen ninguna representación o garantía de ningún tipo, expresa o implícita: (i) en cuanto a la operación o disponibilidad del Servicio, o la información, contenido y materiales o productos incluidos en él; (ii) que el Servicio será ininterrumpido o estará libre de errores; (iii) en cuanto a la precisión, confiabilidad o actualidad de cualquier información o contenido proporcionado a través del Servicio; o (iv) que el Servicio, sus servidores, el contenido o los correos electrónicos enviados desde o en nombre de la Compañía estén libres de virus, scripts, caballos de Troya, gusanos, malware, bombas de tiempo u otros componentes dañinos.</p>
+        <p>Algunas jurisdicciones no permiten la exclusión de ciertos tipos de garantías o limitaciones en los derechos legales aplicables de un consumidor, por lo que algunas o todas las exclusiones y limitaciones anteriores pueden no aplicarse a Usted. Pero en tal caso, las exclusiones y limitaciones establecidas en esta sección se aplicarán en la mayor medida exigible según la ley aplicable.</p>
+
+        <h2>Ley Aplicable</h2>
+        <p>Las leyes del País, excluyendo sus reglas de conflicto de leyes, regirán estos Términos y Su uso del Servicio. Su uso de la Aplicación también puede estar sujeto a otras leyes locales, estatales, nacionales o internacionales.</p>
+
+        <h2>Resolución de Disputas</h2>
+        <p>Si Usted tiene alguna inquietud o disputa sobre el Servicio, acepta intentar primero resolver la disputa de manera informal comunicándose con la Compañía.</p>
+
+        <h2>Para Usuarios de la Unión Europea (UE)</h2>
+        <p>Si Usted es un consumidor de la Unión Europea, se beneficiará de las disposiciones obligatorias de la ley del país en el que reside.</p>
+
+        <h2>Cumplimiento Legal de Estados Unidos</h2>
+        <p>Usted declara y garantiza que (i) no se encuentra en un país sujeto a un embargo del gobierno de los Estados Unidos, o que ha sido designado por el gobierno de los Estados Unidos como un país que "apoya el terrorismo", y (ii) no figura en ninguna lista del gobierno de los Estados Unidos de partes prohibidas o restringidas.</p>
+
+        <h2>Separabilidad y Renuncia</h2>
+        <h3>Separabilidad</h3>
+        <p>Si alguna disposición de estos Términos se considera inaplicable o inválida, dicha disposición se cambiará e interpretará para lograr los objetivos de dicha disposición en la mayor medida posible según la ley aplicable y las disposiciones restantes continuarán en pleno vigor y efecto.</p>
+
+        <h3>Renuncia</h3>
+        <p>Salvo lo dispuesto en este documento, el hecho de no ejercer un derecho o de no exigir el cumplimiento de una obligación en virtud de estos Términos no afectará la capacidad de una parte para ejercer dicho derecho o exigir dicho cumplimiento en cualquier momento posterior, ni la renuncia a un incumplimiento constituirá una renuncia a cualquier incumplimiento posterior.</p>
+
+        <h2>Interpretación de la Traducción</h2>
+        <p>Estos Términos y Condiciones pueden haber sido traducidos si los hemos puesto a Su disposición en nuestro Servicio. Usted acepta que el texto original en inglés prevalecerá en caso de disputa.</p>
+
+        <h2>Cambios a Estos Términos y Condiciones</h2>
+        <p>Nos reservamos el derecho, a Nuestra entera discreción, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es material, haremos esfuerzos razonables para proporcionar un aviso de al menos 30 días antes de que los nuevos términos entren en vigencia. Lo que constituye un cambio material se determinará a Nuestra entera discreción.</p>
+        <p>Al continuar accediendo o utilizando Nuestro Servicio después de que esas revisiones entren en vigencia, Usted acepta estar sujeto a los términos revisados. Si no está de acuerdo con los nuevos términos, en su totalidad o en parte, deje de usar el sitio web y el Servicio.</p>
+
+        <h2>Contáctenos</h2>
+        <p>Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos:</p>
+        <ul>
+            <li>
+                <p>Por correo electrónico: https://mayores-actividades-lorena.netlify.app/</p>
+            </li>
+            <li>
+                <p>Visitando esta página en nuestro sitio web: <a href="https://mayores-actividades-lorena.netlify.app/" rel="external nofollow noopener" target="_blank">https://mayores-actividades-lorena.netlify.app/</a></p>
+            </li>
+            <li>
+                <p>Por teléfono: 711 214 113</p>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="politica-privacidad">
+        <div class="titulo-centrado"><h1>Política de Privacidad</h1></div>
+
+        <h2>Última actualización: 29 de noviembre de 2025</h2>
+        <p>Esta Política de Privacidad describe Nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de Su información cuando utiliza el Servicio y le informa sobre Sus derechos de privacidad y cómo la ley lo protege.</p>
+        <p>Utilizamos Sus Datos Personales para prestar y mejorar el Servicio. Al utilizar el Servicio, usted acepta la recopilación y el uso de información de acuerdo con esta Política de Privacidad. Esta Política de Privacidad se ha creado con la ayuda del <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">Generador de Políticas de Privacidad</a>.</p>
+
+        <h2>Interpretación y Definiciones</h2>
+        <h3>Interpretación</h3>
+        <p>Las palabras cuya letra inicial está en mayúscula tienen significados definidos bajo las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado independientemente de si aparecen en singular o en plural.</p>
+
+        <h3>Definiciones</h3>
+        <p>Para los fines de esta Política de Privacidad:</p>
+        <ul>
+            <li>
+                <p><strong>Cuenta</strong> significa una cuenta única creada para que Usted acceda a nuestro Servicio o a partes de nuestro Servicio.</p>
+            </li>
+            <li>
+                <p><strong>Afiliada</strong> significa una entidad que controla, es controlada por o está bajo control común con una parte, donde "control" significa la propiedad del 50% o más de las acciones, participación accionaria u otros valores con derecho a voto para la elección de directores u otra autoridad administrativa.</p>
+            </li>
+            <li>
+                <p><strong>Compañía</strong> (referida como "la Compañía", "Nosotros" o "Nuestro" en este Acuerdo) se refiere a Mayores actividades.</p>
+            </li>
+            <li>
+                <p><strong>Cookies</strong> son pequeños archivos que un sitio web coloca en Su ordenador, dispositivo móvil o cualquier otro dispositivo, que contienen detalles de Su historial de navegación en ese sitio web entre sus muchos usos.</p>
+            </li>
+            <li>
+                <p><strong>País</strong> se refiere a: España</p>
+            </li>
+            <li>
+                <p><strong>Dispositivo</strong> significa cualquier dispositivo que pueda acceder al Servicio, como un ordenador, un teléfono móvil o una tableta digital.</p>
+            </li>
+            <li>
+                <p><strong>Datos Personales</strong> es cualquier información que se relaciona con un individuo identificado o identificable.</p>
+            </li>
+            <li>
+                <p><strong>Servicio</strong> se refiere al Sitio Web.</p>
+            </li>
+            <li>
+                <p><strong>Proveedor de Servicios</strong> significa cualquier persona física o jurídica que procesa los datos en nombre de la Compañía. Se refiere a terceras empresas o individuos empleados por la Compañía para facilitar el Servicio, para proporcionar el Servicio en nombre de la Compañía, para realizar servicios relacionados con el Servicio o para ayudar a la Compañía a analizar cómo se utiliza el Servicio.</p>
+            </li>
+            <li>
+                <p><strong>Datos de Uso</strong> se refiere a datos recopilados automáticamente, ya sea generados por el uso del Servicio o de la propia infraestructura del Servicio (por ejemplo, la duración de una visita a una página).</p>
+            </li>
+            <li>
+                <p><strong>Sitio Web</strong> se refiere a Mayores actividades, accesible desde <a href="https://mayores-actividades-lorena.netlify.app/" target="_blank">https://mayores-actividades-lorena.netlify.app/</a></p>
+            </li>
+            <li>
+                <p><strong>Usted</strong> significa el individuo que accede o utiliza el Servicio, o la compañía, u otra entidad legal en nombre de la cual dicho individuo está accediendo o utilizando el Servicio, según corresponda.</p>
+            </li>
+        </ul>
+
+        <h2>Recopilación y Uso de Sus Datos Personales</h2>
+        <h3>Tipos de Datos Recopilados</h3>
+        <h4>Datos Personales</h4>
+        <p>Mientras utiliza Nuestro Servicio, podemos solicitarle que Nos proporcione cierta información de identificación personal que puede utilizarse para contactarlo o identificarlo. La información de identificación personal puede incluir, entre otros:</p>
+        <ul>
+            <li>
+                <p>Nombre y apellidos</p>
+            </li>
+            <li>
+                <p>Número de teléfono</p>
+            </li>
+        </ul>
+        
+        <h4>Datos de Uso</h4>
+        <p>Los Datos de Uso se recopilan automáticamente al utilizar el Servicio.</p>
+        <p>Los Datos de Uso pueden incluir información como la dirección de Protocolo de Internet de Su Dispositivo (por ejemplo, dirección IP), tipo de navegador, versión del navegador, las páginas de nuestro Servicio que visita, la hora y la fecha de Su visita, el tiempo dedicado a esas páginas, identificadores únicos de dispositivo y otros datos de diagnóstico.</p>
+        <p>Cuando accede al Servicio a través de un dispositivo móvil, podemos recopilar cierta información automáticamente, que incluye, entre otros, el tipo de dispositivo móvil que utiliza, la identificación única de Su dispositivo móvil, la dirección IP de Su dispositivo móvil, Su sistema operativo móvil, el tipo de navegador de Internet móvil que utiliza, identificadores únicos de dispositivo y otros datos de diagnóstico.</p>
+        <p>También podemos recopilar información que Su navegador envía cada vez que visita Nuestro Servicio o cuando accede al Servicio a través de un dispositivo móvil.</p>
+
+        <h3>Tecnologías de Seguimiento y Cookies</h3>
+        <p>Utilizamos Cookies y tecnologías de seguimiento similares para rastrear la actividad en Nuestro Servicio y almacenar cierta información. Las tecnologías de seguimiento que utilizamos incluyen balizas, etiquetas y scripts para recopilar y rastrear información y para mejorar y analizar Nuestro Servicio. Las tecnologías que utilizamos pueden incluir:</p>
+        <ul>
+            <li>
+                <p><strong>Cookies o Cookies del Navegador.</strong> Una cookie es un pequeño archivo que se coloca en Su Dispositivo. Puede indicar a Su navegador que rechace todas las Cookies o que indique cuándo se está enviando una Cookie. Sin embargo, si no acepta las Cookies, es posible que no pueda utilizar algunas partes de nuestro Servicio. A menos que haya ajustado la configuración de Su navegador para que rechace las Cookies, nuestro Servicio puede utilizar Cookies.</p>
+            </li>
+            <li>
+                <p><strong>Balizas Web.</strong> Ciertas secciones de nuestro Servicio y nuestros correos electrónicos pueden contener pequeños archivos electrónicos conocidos como balizas web (también denominados gifs transparentes, etiquetas de píxel y gifs de un solo píxel) que permiten a la Compañía, por ejemplo, contar los usuarios que han visitado esas páginas o abierto un correo electrónico y para otras estadísticas relacionadas con el sitio web (por ejemplo, registrar la popularidad de una determinada sección y verificar la integridad del sistema y del servidor).</p>
+            </li>
+        </ul>
+        <p>Las Cookies pueden ser Cookies "Persistentes" o de "Sesión". Las Cookies Persistentes permanecen en Su ordenador personal o dispositivo móvil cuando se desconecta, mientras que las Cookies de Sesión se eliminan tan pronto como cierra Su navegador web. Puede obtener más información sobre las cookies en el artículo del <a href="https://www.termsfeed.com/blog/cookies/" target="_blank">sitio web de TermsFeed</a>.</p>
+        <p>Utilizamos Cookies de Sesión y Persistentes para los fines que se detallan a continuación:</p>
+        <ul>
+            <li>
+                <p><strong>Cookies Necesarias / Esenciales</strong></p>
+                <p>Tipo: Cookies de Sesión</p>
+                <p>Administradas por: Nosotros</p>
+                <p>Propósito: Estas Cookies son esenciales para proporcionarle los servicios disponibles a través del Sitio Web y para permitirle utilizar algunas de sus funciones. Ayudan a autenticar a los usuarios y a prevenir el uso fraudulento de las cuentas de usuario. Sin estas Cookies, no se pueden proporcionar los servicios que Usted ha solicitado, y solo utilizamos estas Cookies para proporcionarle esos servicios.</p>
+            </li>
+            <li>
+                <p><strong>Cookies de Política / Aviso de Aceptación de Cookies</strong></p>
+                <p>Tipo: Cookies Persistentes</p>
+                <p>Administradas por: Nosotros</p>
+                <p>Propósito: Estas Cookies identifican si los usuarios han aceptado el uso de cookies en el Sitio Web.</p>
+            </li>
+            <li>
+                <p><strong>Cookies de Funcionalidad</strong></p>
+                <p>Tipo: Cookies Persistentes</p>
+                <p>Administradas por: Nosotros</p>
+                <p>Propósito: Estas Cookies nos permiten recordar las elecciones que Usted realiza cuando utiliza el Sitio Web, como recordar Sus datos de inicio de sesión o su preferencia de idioma. El propósito de estas Cookies es proporcionarle una experiencia más personal y evitar que tenga que volver a ingresar Sus preferencias cada vez que utiliza el Sitio Web.</p>
+            </li>
+        </ul>
+        <p>Para obtener más información sobre las cookies que utilizamos y Sus opciones con respecto a las cookies, visite nuestra Política de Cookies o la sección de Cookies de nuestra Política de Privacidad.</p>
+
+        <h3>Uso de Sus Datos Personales</h3>
+        <p>La Compañía puede utilizar Datos Personales para los siguientes fines:</p>
+        <ul>
+            <li>
+                <p>Para proporcionar y mantener nuestro Servicio, incluido el monitoreo del uso de nuestro Servicio.</p>
+            </li>
+            <li>
+                <p><strong>Para gestionar Su Cuenta:</strong> para gestionar Su registro como usuario del Servicio. Los Datos Personales que Usted proporciona pueden darle acceso a diferentes funcionalidades del Servicio que están disponibles para Usted como usuario registrado.</p>
+            </li>
+            <li>
+                <p><strong>Para la ejecución de un contrato:</strong> el desarrollo, cumplimiento y realización del contrato de compra de los productos, artículos o servicios que Usted ha adquirido o de cualquier otro contrato con Nosotros a través del Servicio.</p>
+            </li>
+            <li>
+                <p><strong>Para contactarlo:</strong> Para contactarlo por correo electrónico, llamadas telefónicas, SMS u otras formas equivalentes de comunicación electrónica, como las notificaciones push de una aplicación móvil con respecto a actualizaciones o comunicaciones informativas relacionadas con las funcionalidades, productos o servicios contratados, incluidas las actualizaciones de seguridad, cuando sea necesario o razonable para su implementación.</p>
+            </li>
+            <li>
+                <p><strong>Para proporcionarle</strong> noticias, ofertas especiales e información general sobre otros bienes, servicios y eventos que ofrecemos que son similares a los que ya ha comprado o sobre los que ha consultado, a menos que haya optado por no recibir dicha información.</p>
+            </li>
+            <li>
+                <p><strong>Para gestionar Sus solicitudes:</strong> Para atender y gestionar Sus solicitudes dirigidas a Nosotros.</p>
+            </li>
+            <li>
+                <p><strong>Para transferencias comerciales:</strong> Podemos utilizar Su información para evaluar o llevar a cabo una fusión, desinversión, reestructuración, reorganización, disolución u otra venta o transferencia de algunos o todos Nuestros activos, ya sea como una empresa en funcionamiento o como parte de un procedimiento de quiebra, liquidación o similar, en el que los Datos Personales que Nosotros tenemos sobre los usuarios de nuestro Servicio se encuentran entre los activos transferidos.</p>
+            </li>
+            <li>
+                <p><strong>Para otros fines:</strong> Podemos utilizar Su información para otros fines, como el análisis de datos, la identificación de tendencias de uso, la determinación de la efectividad de nuestras campañas promocionales y para evaluar y mejorar nuestro Servicio, productos, servicios, marketing y Su experiencia.</p>
+            </li>
+        </ul>
+        
+        <p>Podemos compartir Su información personal en las siguientes situaciones:</p>
+        <ul>
+            <li>
+                <p><strong>Con Proveedores de Servicios:</strong> Podemos compartir Su información personal con Proveedores de Servicios para monitorear y analizar el uso de nuestro Servicio, para contactarlo.</p>
+            </li>
+            <li>
+                <p><strong>Para transferencias comerciales:</strong> Podemos compartir o transferir Su información personal en relación con, o durante las negociaciones de, cualquier fusión, venta de activos de la Compañía, financiación o adquisición de la totalidad o una parte de Nuestro negocio a otra compañía.</p>
+            </li>
+            <li>
+                <p><strong>Con Afiliadas:</strong> Podemos compartir Su información con Nuestras afiliadas, en cuyo caso les exigiremos a esas afiliadas que respeten esta Política de Privacidad. Las afiliadas incluyen Nuestra empresa matriz y cualquier otra subsidiaria, socio de riesgo compartido u otras compañías que controlamos o que están bajo control común con Nosotros.</p>
+            </li>
+            <li>
+                <p><strong>Con socios comerciales:</strong> Podemos compartir Su información con Nuestros socios comerciales para ofrecerle ciertos productos, servicios o promociones.</p>
+            </li>
+            <li>
+                <p><strong>Con otros usuarios:</strong> cuando Usted comparte información personal o interactúa de otra manera en las áreas públicas con otros usuarios, dicha información puede ser vista por todos los usuarios y puede distribuirse públicamente en el exterior.</p>
+            </li>
+            <li>
+                <p><strong>Con Su consentimiento:</strong> Podemos divulgar Su información personal para cualquier otro propósito con Su consentimiento.</p>
+            </li>
+        </ul>
+
+        <h2>Retención de Sus Datos Personales</h2>
+        <p>La Compañía conservará Sus Datos Personales solo durante el tiempo que sea necesario para los fines establecidos en esta Política de Privacidad. Conservaremos y utilizaremos Sus Datos Personales en la medida necesaria para cumplir con nuestras obligaciones legales (por ejemplo, si se nos exige conservar Sus datos para cumplir con las leyes aplicables), resolver disputas y hacer cumplir nuestros acuerdos y políticas legales.</p>
+        <p>La Compañía también conservará los Datos de Uso para fines de análisis interno. Los Datos de Uso generalmente se conservan por un período de tiempo más corto, excepto cuando estos datos se utilizan para fortalecer la seguridad o para mejorar la funcionalidad de Nuestro Servicio, o Estamos legalmente obligados a conservar estos datos por períodos más largos.</p>
+
+        <h2>Transferencia de Sus Datos Personales</h2>
+        <p>Su información, incluidos los Datos Personales, se procesa en las oficinas operativas de la Compañía y en cualquier otro lugar donde se encuentren las partes involucradas en el procesamiento. Significa que esta información puede transferirse a — y mantenerse en — ordenadores ubicados fuera de Su estado, provincia, país u otra jurisdicción gubernamental donde las leyes de protección de datos pueden diferir de las de Su jurisdicción.</p>
+        <p>Su consentimiento a esta Política de Privacidad seguido de Su presentación de dicha información representa Su acuerdo con esa transferencia.</p>
+        <p>La Compañía tomará todas las medidas razonablemente necesarias para garantizar que Sus datos se traten de forma segura y de acuerdo con esta Política de Privacidad y no se realizará ninguna transferencia de Sus Datos Personales a una organización o un país a menos que existan controles adecuados establecidos, incluida la seguridad de Sus datos y otra información personal.</p>
+
+        <h2>Eliminación de Sus Datos Personales</h2>
+        <p>Usted tiene derecho a eliminar o solicitar que le ayudemos a eliminar los Datos Personales que hemos recopilado sobre Usted.</p>
+        <p>Nuestro Servicio puede brindarle la posibilidad de eliminar cierta información sobre Usted desde dentro del Servicio.</p>
+        <p>Puede actualizar, modificar o eliminar Su información en cualquier momento iniciando sesión en Su Cuenta, si tiene una, y visitando la sección de configuración de la cuenta que le permite administrar Su información personal. También puede contactarnos para solicitar acceso, corregir o eliminar cualquier información personal que Nos haya proporcionado.</p>
+        <p>Tenga en cuenta, sin embargo, que es posible que necesitemos retener cierta información cuando tengamos una obligación legal o una base legal para hacerlo.</p>
+
+        <h2>Divulgación de Sus Datos Personales</h2>
+        <h3>Transacciones Comerciales</h3>
+        <p>Si la Compañía está involucrada en una fusión, adquisición o venta de activos, Sus Datos Personales pueden transferirse. Le avisaremos antes de que Sus Datos Personales sean transferidos y queden sujetos a una Política de Privacidad diferente.</p>
+
+        <h3>Cumplimiento de la ley</h3>
+        <p>Bajo ciertas circunstancias, la Compañía puede estar obligada a divulgar Sus Datos Personales si así lo exige la ley o en respuesta a solicitudes válidas de autoridades públicas (por ejemplo, un tribunal o una agencia gubernamental).</p>
+
+        <h3>Otros requisitos legales</h3>
+        <p>La Compañía puede divulgar Sus Datos Personales de buena fe cuando considere que dicha acción es necesaria para:</p>
+        <ul>
+            <li>
+                <p>Cumplir con una obligación legal</p>
+            </li>
+            <li>
+                <p>Proteger y defender los derechos o la propiedad de la Compañía</p>
+            </li>
+            <li>
+                <p>Prevenir o investigar posibles infracciones en relación con el Servicio</p>
+            </li>
+            <li>
+                <p>Proteger la seguridad personal de los Usuarios del Servicio o del público</p>
+            </li>
+            <li>
+                <p>Proteger contra la responsabilidad legal</p>
+            </li>
+        </ul>
+
+        <h2>Seguridad de Sus Datos Personales</h2>
+        <p>La seguridad de Sus Datos Personales es importante para Nosotros, pero recuerde que ningún método de transmisión a través de Internet, o método de almacenamiento electrónico es 100% seguro. Si bien Nos esforzamos por utilizar medios comercialmente aceptables para proteger Sus Datos Personales, no podemos garantizar Su seguridad absoluta.</p>
+
+        <h2>Información Detallada sobre el Procesamiento de Sus Datos Personales</h2>
+        <p>Los Proveedores de Servicios que utilizamos pueden tener acceso a Sus Datos Personales. Estos proveedores externos recopilan, almacenan, utilizan, procesan y transfieren información sobre Su actividad en Nuestro Servicio de acuerdo con Sus Políticas de Privacidad.</p>
+
+        <h3>Uso, Rendimiento y Varios</h3>
+        <p>Podemos utilizar Proveedores de Servicios externos para mantener y mejorar nuestro Servicio.</p>
+
+        <h4>Google Places</h4>
+        <p>Google Places es un servicio que devuelve información sobre lugares mediante solicitudes HTTP. Es operado por Google</p>
+        <p>El servicio Google Places puede recopilar información de Usted y de Su Dispositivo con fines de seguridad.</p>
+        <p>La información recopilada por Google Places se mantiene de acuerdo con la Política de Privacidad de Google: <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">https://www.google.com/intl/en/policies/privacy/</a></p>
+
+        <h2>Privacidad de los Niños</h2>
+        <p>Nuestro Servicio no está dirigido a menores de 13 años. No recopilamos a sabiendas información de identificación personal de ninguna persona menor de 13 años. Si Usted es padre, madre o tutor y tiene conocimiento de que Su hijo Nos ha proporcionado Datos Personales, póngase en contacto con Nosotros. Si Nos damos cuenta de que hemos recopilado Datos Personales de cualquier persona menor de 13 años sin la verificación del consentimiento de los padres, tomamos medidas para eliminar esa información de Nuestros servidores.</p>
+        <p>Si necesitamos basarnos en el consentimiento como base legal para procesar Su información y Su país requiere el consentimiento de un padre, podemos requerir el consentimiento de Su padre antes de recopilar y utilizar esa información.</p>
+
+        <h2>Enlaces a Otros Sitios Web</h2>
+        <p>Nuestro Servicio puede contener enlaces a otros sitios web que no son operados por Nosotros. Si hace clic en un enlace de terceros, se le dirigirá al sitio de ese tercero. Le recomendamos encarecidamente que revise la Política de Privacidad de cada sitio que visite.</p>
+        <p>No tenemos control ni asumimos ninguna responsabilidad por el contenido, las políticas de privacidad o las prácticas de los sitios o servicios de terceros.</p>
+
+        <h2>Cambios a esta Política de Privacidad</h2>
+        <p>Podemos actualizar Nuestra Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página.</p>
+        <p>Le informaremos por correo electrónico y/o un aviso destacado en Nuestro Servicio, antes de que el cambio entre en vigor y actualizaremos la fecha de "Última actualización" en la parte superior de esta Política de Privacidad.</p>
+        <p>Se le recomienda revisar esta Política de Privacidad periódicamente para detectar cualquier cambio. Los cambios a esta Política de Privacidad son efectivos cuando se publican en esta página.</p>
+
+        <h2>Contáctenos</h2>
+        <p>Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactarnos:</p>
+        <ul>
+            <li>
+                <p>Por correo electrónico: <a href="mailto:enmayoresactividades@gmail.com">enmayoresactividades@gmail.com</a></p>
+            </li>
+            <li>
+                <p>Visitando esta página en nuestro sitio web: <a href="https://mayores-actividades-lorena.netlify.app/contacto" target="_blank">https://mayores-actividades-lorena.netlify.app/contacto</a></p>
+            </li>
+            <li>
+                <p>Por teléfono: 711214113</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="politica-cookies">
+        <div class="titulo-centrado"><h1>Política de Cookies</h1></div>
+        <p>Última actualización: 29 de noviembre de 2025</p>
+        <p>Esta Política de Cookies explica qué son las Cookies y cómo las utilizamos. Le recomendamos leer esta política para que pueda comprender qué tipo de cookies utilizamos, la información que recopilamos a través de ellas y cómo se utiliza esa información. Esta Política de Cookies se ha creado con la ayuda del <a href="https://www.termsfeed.com/cookies-policy-generator/" target="_blank">Generador de Políticas de Cookies</a>.</p>
+        <p>Las Cookies no suelen contener información que identifique personalmente a un usuario, pero la información personal que almacenamos sobre Usted puede estar vinculada a la información almacenada y obtenida de las Cookies. Para obtener más información sobre cómo usamos, almacenamos y mantenemos seguros sus datos personales, consulte nuestra Política de Privacidad.</p>
+        <p>No almacenamos información personal sensible, como direcciones de correo, contraseñas de cuentas, etc., en las Cookies que utilizamos.</p>
+
+        <h2>Interpretación y Definiciones</h2>
+        <h3>Interpretación</h3>
+        <p>Las palabras cuyas letras iniciales están en mayúscula tienen significados definidos bajo las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado independientemente de si aparecen en singular o en plural.</p>
+
+        <h3>Definiciones</h3>
+        <p>Para los fines de esta Política de Cookies:</p>
+        <ul>
+            <li>
+                <p><strong>Compañía</strong> (referida como "la Compañía", "Nosotros" o "Nuestro" en esta Política de Cookies) se refiere a Mayores Actividades.</p>
+            </li>
+            <li>
+                <p><strong>Cookies</strong> son pequeños archivos que un sitio web coloca en Su ordenador, dispositivo móvil o cualquier otro dispositivo, que contienen detalles de Su historial de navegación en ese sitio web entre sus muchos usos.</p>
+            </li>
+            <li>
+                <p><strong>Sitio Web</strong> se refiere a Mayores Actividades, accesible desde <a href="https://mayores-actividades-lorena.netlify.app/" rel="external nofollow noopener" target="_blank">https://mayores-actividades-lorena.netlify.app/</a></p>
+            </li>
+            <li>
+                <p><strong>Usted</strong> significa el individuo que accede o utiliza el Sitio Web, o una compañía, o cualquier entidad legal en nombre de la cual dicho individuo está accediendo o utilizando el Sitio Web, según corresponda.</p>
+            </li>
+        </ul>
+
+        <h2>El Uso de las Cookies</h2>
+        <h3>Tipo de Cookies que Utilizamos</h3>
+        <p>Las Cookies pueden ser Cookies "Persistentes" o de "Sesión". Las Cookies Persistentes permanecen en Su ordenador personal o dispositivo móvil cuando se desconecta, mientras que las Cookies de Sesión se eliminan tan pronto como cierra Su navegador web.</p>
+        <p>Utilizamos cookies de sesión y persistentes para los fines que se detallan a continuación:</p>
+        <ul>
+            <li>
+                <p><strong>Cookies Necesarias / Esenciales</strong></p>
+                <p>Tipo: Cookies de Sesión</p>
+                <p>Administradas por: Nosotros</p>
+                <p>Propósito: Estas Cookies son esenciales para proporcionarle los servicios disponibles a través del Sitio Web y para permitirle utilizar algunas de sus funciones. Ayudan a autenticar a los usuarios y a prevenir el uso fraudulento de las cuentas de usuario. Sin estas Cookies, no se pueden proporcionar los servicios que Usted ha solicitado, y solo utilizamos estas Cookies para proporcionarle esos servicios.</p>
+            </li>
+            <li>
+                <p><strong>Cookies de Funcionalidad</strong></p>
+                <p>Tipo: Cookies Persistentes</p>
+                <p>Administradas por: Nosotros</p>
+                <p>Propósito: Estas Cookies nos permiten recordar las elecciones que Usted realiza cuando utiliza el Sitio Web, como recordar Sus datos de inicio de sesión o su preferencia de idioma. El propósito de estas Cookies es proporcionarle una experiencia más personal y evitar que tenga que volver a ingresar Sus preferencias cada vez que utiliza el Sitio Web.</p>
+            </li>
+        </ul>
+
+        <h3>Sus Opciones Respecto a las Cookies</h3>
+        <p>Si prefiere evitar el uso de Cookies en el Sitio Web, primero debe deshabilitar el uso de Cookies en Su navegador y luego eliminar las Cookies guardadas en Su navegador asociadas con este sitio web. Puede utilizar esta opción para evitar el uso de Cookies en cualquier momento.</p>
+        <p>Si no acepta Nuestras Cookies, puede experimentar algunas inconveniencias en Su uso del Sitio Web y algunas funciones podrían no operar correctamente.</p>
+        <p>Si desea eliminar las Cookies o indicar a Su navegador web que elimine o rechace las Cookies, visite las páginas de ayuda de Su navegador web.</p>
+        <ul>
+            <li>
+                <p>Para el navegador web Chrome, visite esta página de Google: <a href="https://support.google.com/accounts/answer/32050" rel="external nofollow noopener" target="_blank">https://support.google.com/accounts/answer/32050</a></p>
+            </li>
+            <li>
+                <p>Para el navegador web Internet Explorer, visite esta página de Microsoft: <a href="http://support.microsoft.com/kb/278835" rel="external nofollow noopener" target="_blank">http://support.microsoft.com/kb/278835</a></p>
+            </li>
+            <li>
+                <p>Para el navegador web Firefox, visite esta página de Mozilla: <a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" rel="external nofollow noopener" target="_blank">https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored</a></p>
+            </li>
+            <li>
+                <p>Para el navegador web Safari, visite esta página de Apple: <a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" rel="external nofollow noopener" target="_blank">https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac</a></p>
+            </li>
+        </ul>
+        <p>Para cualquier otro navegador web, visite las páginas web oficiales de Su navegador web.</p>
+
+        <h3>Más Información sobre Cookies</h3>
+        <p>Puede obtener más información sobre las cookies aquí: <a href="https://www.termsfeed.com/blog/cookies/" target="_blank">Todo Sobre Cookies por TermsFeed</a>.</p>
+
+        <h3>Contáctenos</h3>
+        <p>Si tiene alguna pregunta sobre esta Política de Cookies, puede contactarnos:</p>
+        <ul>
+            <li>
+                <p>Por correo electrónico: <a href="mailto:enmayoresactividades@gmail.com">enmayoresactividades@gmail.com</a></p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#" onclick="cambiarPestana('aviso-legal'); return false;">Aviso Legal</a> |
+            <a href="#" onclick="cambiarPestana('terminos-condiciones'); return false;">Términos y Condiciones</a> | 
+            <a href="#" onclick="cambiarPestana('politica-privacidad'); return false;">Política de Privacidad</a> |
+            <a href="#" onclick="cambiarPestana('politica-cookies'); return false;">Política de Cookies</a>
+        </div>
+        <p>© 2025 Mayores Actividades. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función de Javascript para cambiar de pestaña
+        function cambiarPestana(idSeccion) {
+            // Oculta todas las secciones
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Desactiva el botón 'activo' del menú de navegación principal
+            document.querySelectorAll('.menu-links .btn-menu').forEach(button => {
+                button.classList.remove('activo');
+            });
+
+            // Muestra la sección deseada
+            const seccionActiva = document.getElementById(idSeccion);
+            if (seccionActiva) {
+                seccionActiva.style.display = 'block';
+            }
+
+            // Si la sección activa es una de las del menú superior, activa el botón correspondiente
+            // Nota: Las páginas legales no activarán un botón del menú superior.
+            const botonActivo = document.getElementById('btn-' + idSeccion);
+            if (botonActivo && (idSeccion !== 'terminos-condiciones' && idSeccion !== 'politica-privacidad' && idSeccion !== 'politica-cookies' && idSeccion !== 'aviso-legal')) {
+                botonActivo.classList.add('activo');
+            }
+        }
+
+        // Asegúrate de que la sección de inicio se muestre al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            cambiarPestana('inicio');
+        });
+    </script>
+</body>
+</html>
