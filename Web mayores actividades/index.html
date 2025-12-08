@@ -606,7 +606,11 @@
         <div class="contenedor-contacto-flex">
             <div class="columna-contacto">
                 <h3 style="color: var(--verde-principal); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">Formulario de Contacto</h3>
-                <form action="#" method="POST">
+                <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    			<input type="hidden" name="form-name" value="contacto" />
+    			<p style="display: none;">
+       	 			<label>No rellenar: <input name="bot-field" /></label>
+   			 </p>
                     <label for="nombre">Nombre y Apellidos:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
 
@@ -1141,3 +1145,4 @@
     </script>
 </body>
 </html>
+
