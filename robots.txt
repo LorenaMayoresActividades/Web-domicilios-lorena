@@ -1,0 +1,9 @@
+# Permite el acceso a todos los rastreadores
+User-agent: *
+Allow: /
+
+# Excluye la carpeta de administración del CMS
+Disallow: /admin/
+
+# Indica la ubicación de tu Sitemap
+Sitemap: https://lorena-mayores-actividades.netlify.app/sitemap.xml
