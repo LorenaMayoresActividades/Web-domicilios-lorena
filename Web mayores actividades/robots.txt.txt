@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lorena-mayores-actividades.netlify.app/sitemap.xml
