@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Terapia Ocupacional - Mayores Actividades</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/">Volver a la Web Principal</a> | 
+            <a href="/posts/">Blog</a>
+        </nav>
+    </header>
+
+    <main id="blog-listado" style="padding: 20px; max-width: 800px; margin: auto;">
+        <h1>Blog de Terapia Ocupacional a Domicilio</h1>
+        <p>Aquí encontrarás artículos sobre estimulación cognitiva, adaptaciones y consejos para el bienestar de las personas mayores.</p>
+        
+        <section class="lista-articulos">
+            {{ range .Pages }}
+            <article style="border-bottom: 1px solid #ddd; padding: 20px 0;">
+                <h2 style="margin-bottom: 10px;">
+                    <a href="{{ .RelPermalink }}" style="color: #2c3e50; text-decoration: none;">{{ .Title }}</a>
+                </h2>
+                <p style="color: #666;">{{ .Description }}</p>
+                <small>Publicado el: {{ .Date.Format "02/01/2006" }}</small>
+                <br><br>
+                <a href="{{ .RelPermalink }}" class="btn-leer" style="color: #007bff; font-weight: bold;">Leer más →</a>
+            </article>
+            {{ else }}
+            <p>Todavía no hay artículos publicados. ¡Vuelve pronto!</p>
+            {{ end }}
+            </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lorena Barrado - Terapia Ocupacional</p>
+    </footer>
+
+</body>
+</html>

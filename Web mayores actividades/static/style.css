@@ -1,0 +1,276 @@
+        /* --- ESTILOS GENERALES --- */
+        :root {
+            --verde-principal: #4A7C59;
+            --verde-claro: #E8F3EB;
+            --texto-oscuro: #2C3E50;
+            --blanco: #ffffff;
+            --gris-fondo: #f9f9f9;
+            --whatsapp-color: #25D366;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+            background-color: #fdfdfd;
+        }
+
+        h1, h2, h3, h4 { margin-top: 0; }
+        img { max-width: 100%; height: auto; border-radius: 5px; }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        nav {
+            background: var(--blanco);
+            padding: 0.5rem 2%;
+            border-bottom: 1px solid #ddd;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo-container { display: flex; align-items: center; cursor: pointer; margin-right: 10px;}
+        .logo-img { height: 60px; width: auto; margin-right: 10px; object-fit: contain; }
+
+        .menu-links { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; justify-content: center; }
+        
+        .btn-menu { 
+            background: none; border: none; cursor: pointer;
+            text-decoration: none; color: var(--texto-oscuro); font-weight: 600; 
+            font-size: 0.85rem; text-transform: uppercase; padding: 10px 12px;
+            transition: all 0.3s; font-family: inherit;
+        }
+        .btn-menu:hover { color: var(--verde-principal); background-color: var(--verde-claro); border-radius: 5px; }
+        .btn-menu.activo { color: white; background-color: var(--verde-principal); border-radius: 5px; }
+
+        /* --- SECCIONES --- */
+        section { 
+            display: none; 
+            padding: 4rem 5%; 
+            animation: aparecer 0.5s ease;
+            min-height: 80vh; 
+        }
+        
+        /* ESTILO ESPECÍFICO PARA PÁGINAS LEGALES */
+        #politica-privacidad, #terminos-condiciones, #politica-cookies, #aviso-legal {
+             max-width: 1000px;
+             margin: 0 auto;
+             padding: 4rem 2%; /* Ajuste de padding si es necesario */
+        }
+        #politica-privacidad h1, #terminos-condiciones h1, #politica-cookies h1, #aviso-legal h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--verde-principal);
+        }
+        #politica-privacidad h2, #terminos-condiciones h2, #politica-cookies h2, #aviso-legal h2 {
+            font-size: 1.8rem;
+            color: var(--texto-oscuro);
+            border-bottom: 1px solid var(--verde-principal);
+            padding-bottom: 10px;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            text-align: left; /* Títulos de sección a la izquierda */
+            display: block; /* Para que ocupe todo el ancho si el h2 principal es inline-block */
+        }
+        #politica-privacidad h3, #terminos-condiciones h3, #politica-cookies h3, #aviso-legal h3 {
+            font-size: 1.4rem;
+            color: var(--verde-principal);
+            margin-top: 1.5rem;
+        }
+        #politica-privacidad h4, #terminos-condiciones h4, #politica-cookies h4, #aviso-legal h4 {
+            font-size: 1.2rem;
+            color: var(--texto-oscuro);
+            margin-top: 1rem;
+        }
+        #politica-privacidad ul, #terminos-condiciones ul, #politica-cookies ul, #aviso-legal ul {
+            margin-left: 20px;
+            padding-left: 0;
+            list-style: disc;
+        }
+        /* Para listas dentro de listas, ajustamos el estilo */
+        #politica-privacidad ul ul, #terminos-condiciones ul ul, #politica-cookies ul ul, #aviso-legal ul ul {
+            list-style: circle;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        #politica-privacidad li p, #terminos-condiciones li p, #politica-cookies li p, #aviso-legal li p {
+            margin: 0;
+        }
+
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 { text-align: center; font-size: 2.2rem; color: var(--verde-principal); margin-bottom: 3rem; border-bottom: 2px solid var(--verde-claro); display: inline-block; padding-bottom: 10px;}
+        .titulo-centrado { text-align: center; }
+
+        /* --- ESTILOS INICIO --- */
+        #inicio {
+            display: block; 
+            background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover; background-position: center;
+            text-align: center;
+            padding-top: 5rem;
+        }
+
+        h1 { font-size: 3.5rem; color: var(--verde-principal); margin-bottom: 1rem; text-shadow: 2px 2px 0px white; }
+        
+        .formula-box {
+            background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-weight: bold; font-size: 1.1rem; color: var(--texto-oscuro); max-width: 850px; margin: 0 auto 3rem auto;
+            border-left: 6px solid var(--verde-principal);
+        }
+
+        .intro-texto { max-width: 900px; margin: 0 auto 3rem auto; font-size: 1.15rem; text-align: justify; }
+        .enfermedades-container { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-bottom: 3rem; text-align: left; }
+        .caja-enfermedad { flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid var(--verde-principal); }
+        .caja-enfermedad h3 { color: var(--verde-principal); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .caja-enfermedad ul { padding-left: 20px; }
+        .caja-enfermedad li { margin-bottom: 8px; }
+
+        .boton-cta { 
+            background-color: var(--verde-principal); color: white; padding: 15px 40px; cursor: pointer;
+            border: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; 
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.4); transition: transform 0.3s;
+        }
+        .boton-cta:hover { transform: scale(1.05); background-color: #3a6346; }
+
+        /* --- ESTILOS SOBRE MÍ --- */
+        #sobre-mi {
+            /* Mantenemos el min-height, pero ajustamos padding si es necesario */
+        }
+        .sobre-mi-layout { max-width: 1000px; margin: 0 auto; }
+        .bio-principal { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; margin-bottom: 4rem; }
+        .bio-texto { flex: 2; min-width: 300px; text-align: justify; }
+        .bio-foto { flex: 1; min-width: 250px; text-align: center; }
+        .foto-perfil { width: 280px; height: 280px; object-fit: cover; border-radius: 50%; border: 6px solid var(--verde-claro); }
+
+        .caja-formacion { background: var(--gris-fondo); padding: 2rem; border-radius: 10px; margin-bottom: 4rem; border-left: 5px solid var(--verde-principal); }
+        .caja-formacion ul { list-style-type: none; padding: 0; }
+        .caja-formacion li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        .caja-formacion li:before { content: "🎓"; position: absolute; left: 0; color: var(--verde-principal); }
+
+        .proceso-pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .paso { background: white; padding: 1.5rem; border-radius: 10px; border: 1px solid #eee; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+        .numero-paso { background: var(--verde-principal); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 15px auto; }
+        
+        .iconos-contacto-rapido { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .btn-icono { display: flex; align-items: center; gap: 10px; padding: 12px 25px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; transition: transform 0.2s; cursor: pointer; border: none;}
+        .btn-icono:hover { transform: translateY(-3px); }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-telefono { background-color: #3498db; }
+        .btn-email { background-color: #e74c3c; }
+
+        /* --- ESTILOS SERVICIOS (INFORMACIÓN) --- */
+        .que-es-to { text-align: center; max-width: 800px; margin: 0 auto 4rem auto; font-size: 1.1rem; }
+        
+        .beneficios-container { margin-bottom: 4rem; }
+        .lista-beneficios { list-style: none; padding: 0; display: grid; gap: 1.5rem; }
+        .lista-beneficios li { background: white; padding: 1.5rem; border-radius: 8px; border-left: 5px solid var(--verde-principal); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .lista-beneficios strong { color: var(--verde-principal); font-size: 1.1rem; }
+        
+        .dirigido-container { background: var(--verde-claro); padding: 3rem; border-radius: 15px; margin-bottom: 4rem; }
+        .lista-dirigido { list-style-type: disc; padding-left: 20px; }
+        .lista-dirigido li { margin-bottom: 10px; font-size: 1.05rem; }
+
+        .adaptacion-hogar-box { max-width: 900px; margin: 0 auto 4rem auto; padding: 2rem; background: #fff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .adaptacion-hogar-box h3 { color: var(--texto-oscuro); font-size: 1.8rem; border-bottom: 2px solid var(--verde-claro); padding-bottom: 10px; margin-bottom: 2rem; }
+        .proceso-list { list-style: none; padding: 0; }
+        .proceso-list li { margin-bottom: 20px; padding-left: 15px; border-left: 4px solid var(--verde-principal); }
+        .proceso-list strong { display: block; margin-bottom: 5px; font-size: 1.1rem; }
+
+
+        .cta-servicios { text-align: center; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 700px; margin: 0 auto; border-top: 5px solid var(--verde-principal); }
+
+        /* --- TARIFAS (ANTIGUO SERVICIOS) --- */
+        .grid-tarifas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .card-tarifa { 
+            background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; 
+            border-top: 5px solid var(--verde-principal); display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .vr-card { border-top: 5px solid #8e44ad; }
+        .vr-card h3 { color: #8e44ad; }
+        .precio { font-size: 1.8rem; font-weight: bold; color: var(--texto-oscuro); margin: 15px 0; }
+        .zona-aviso { text-align: center; margin-top: 3rem; background: #fff; padding: 1rem; display: inline-block; border-radius: 50px; border: 1px solid #ddd; }
+
+        /* --- RECURSOS --- */
+        .recursos-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1.5rem; 
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+        .recurso-item { background: white; padding: 2rem; border-radius: 8px; text-align: center; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05);}
+
+        /* --- BLOG --- */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+        .articulo { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .articulo-texto { padding: 1.5rem; }
+
+        /* --- SUSCRIPCIÓN (Añadido) --- */
+        .suscripcion-box {
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            padding: 2rem;
+            background: var(--verde-claro);
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .suscripcion-box input[type="email"] {
+            width: 65%; /* Ajustado para que quepa en la caja */
+            display: inline-block;
+        }
+        .suscripcion-box button {
+            width: 30%; /* Ajustado para que quepa en la caja */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 0;
+        }
+
+        /* --- CONTACTO --- */
+        .contenedor-contacto-flex { display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; max-width: 1000px; margin: 0 auto; }
+        .columna-contacto { flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .contacto-link { color: var(--verde-principal); text-decoration: none; font-weight: bold; }
+        input, textarea { width: 100%; padding: 12px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .btn-enviar { background-color: var(--verde-principal); color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+        .btn-enviar:hover { background-color: #3a6346; }
+        
+        /* CORREGIDO: Placeholder en negrita con compatibilidad multi-navegador */
+        input::placeholder, input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
+            font-weight: bold;
+            color: #555; 
+            opacity: 1; 
+        }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 20px; background: #eee; font-size: 0.8rem; color: #666; margin-top: auto;}
+        .footer-links a { 
+            color: #666; 
+            margin: 0 8px; 
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--verde-principal);
+        }
+
+        /* MÓVIL */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            nav { flex-direction: column; gap: 1rem; }
+            .logo-img { height: 50px; margin-bottom: 10px; }
+            .menu-links { justify-content: center; gap: 5px; }
+            .btn-menu { font-size: 0.8rem; padding: 8px 10px; }
+            .bio-principal { flex-direction: column-reverse; text-align: center; }
+            .bio-texto { text-align: center; }
+            .enfermedades-container { flex-direction: column; }
+            .suscripcion-box input[type="email"], .suscripcion-box button {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
