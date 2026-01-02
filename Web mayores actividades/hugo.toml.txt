@@ -1,11 +1,10 @@
-baseURL = 'https://https://lorena-mayores-actividades.netlify.app/'
-languageCode = 'es-es'
-title = 'Lorena Barrado | Terapia Ocupacional'
-theme = ''
+baseURL = "https://lorena-mayores-actividades.netlify.app"
+languageCode = "es-es"
+title = "Lorena Barrado | Terapia Ocupacional"
 
 [params]
-  description = 'Terapia Ocupacional a domicilio para mayores en Madrid'
-  author = 'Lorena Barrado'
+  description = "Terapia Ocupacional a domicilio para mayores en Madrid"
+  author = "Lorena Barrado"
 
 [markup]
   [markup.goldmark]
