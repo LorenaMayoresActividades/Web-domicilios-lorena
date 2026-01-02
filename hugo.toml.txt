@@ -1,0 +1,12 @@
+baseURL = "https://lorena-mayores-actividades.netlify.app"
+languageCode = "es-es"
+title = "Lorena Barrado | Terapia Ocupacional"
+
+[params]
+  description = "Terapia Ocupacional a domicilio para mayores en Madrid"
+  author = "Lorena Barrado"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
