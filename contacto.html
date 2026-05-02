@@ -38,7 +38,10 @@
         <div class="contenedor-contacto-flex">
             <div class="columna-contacto">
                 <h3 style="color: var(--verde-principal); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">Formulario de Contacto</h3>
-                <form action="#" method="POST">
+                <form name="contacto" method="POST" data-netlify="true" action="/gracias.html">
+    <input type="hidden" name="form-name" value="contacto">
+                <form name="contacto" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contacto">
                     <label for="nombre">Nombre y Apellidos:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
 
@@ -53,7 +56,7 @@
 		    <div style="margin-top: 15px; margin-bottom: 20px; display: flex; align-items: flex-start;">
         	    	<input type="checkbox" id="acepto-privacidad" name="acepto-privacidad" required style="margin-top: 4px;">
         		<label for="acepto-privacidad" style="font-size: 0.9em; margin-left: 10px; line-height: 1.3;">
-            		    He leído y acepto la <a href="#politica-privacidad" onclick="cambiarPestana('politica-privacidad');" style="color: var(--verde-principal); text-decoration: underline;">Política de Privacidad</a>.
+            		    He leído y acepto la <a href="politica-privacidad.html" class="btn-menu">Política de privacidad</a>.
         		</label>
     		     </div>
                     <button type="submit" class="btn-enviar">Enviar Consulta</button>
