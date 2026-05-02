@@ -26,5 +26,35 @@
 
         // Asegúrate de que la sección de inicio se muestre al cargar
         document.addEventListener('DOMContentLoaded', () => {
-            cambiarPestana('inicio');
+    // 1. Mostrar la sección de inicio al cargar
+    cambiarPestana('inicio');
+
+    // 2. Control del Formulario de Contacto (NUEVO)
+    const formulario = document.getElementById('miFormulario');
+    if (formulario) {
+        formulario.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Evita que la página se recargue o se vaya a blanco
+
+            const formData = new FormData(formulario);
+            
+            try {
+                // Envío silencioso a Netlify
+                await fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString(),
+                });
+
+                // Mensaje emergente de éxito
+                alert("¡Mensaje enviado con éxito! Lorena te responderá lo antes posible.");
+                
+                // Limpiar el formulario
+                formulario.reset();
+
+            } catch (error) {
+                alert("Hubo un error al enviar el formulario. Por favor, revisa tu conexión o inténtalo más tarde.");
+            }
         });
+    }
+});
+        
